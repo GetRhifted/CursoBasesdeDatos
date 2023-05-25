@@ -1,17 +1,14 @@
 -- alt + 96 para hacer las comillas invertidas ``
 USE metro_cdmx;
 
-CREATE TABLE `Trains` (
+CREATE TABLE `Stations_Delete` (
 
-    `serial_number` VARCHAR(10) NOT NULL,
-    `line_id` BIGINT(20) UNSIGNED NOT NULL,
-    `type`  tinyint(4) NOT NULL,
-    `year` INT(4) NOT NULL,
+    `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name`  VARCHAR(50) NOT NULL,
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     
-    PRIMARY KEY (serial_number),
-    CONSTRAINT `fk_Lines` FOREIGN KEY (`line_id`) REFERENCES `Lines` (id)
+    PRIMARY KEY (id)
 
 )
 DEFAULT CHARSET = utf8mb4
